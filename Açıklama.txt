@@ -1,0 +1,43 @@
+Bu ödevde, Eclipse ve Java dilini kullanarak bir konsol uygulaması geliştirmeniz beklenmektedir.
+Bir text dosyasında bulunan kayıtların ilk 5000 tanesini (önce ilk 2500, sonra ikinci 2500) okutup, bu kayıtları MaxHeap veri yapısında organize ediniz.
+Tasarımlarınızı yaparken nesneye yönelik programlama tekniğini; algoritmalarınızı kodlarken de performans kriterlerini göz önünde bulundurunuz.
+Constructor() -> constructor fonksiyonunun imzasını kendiniz belirleyiniz. 1’den fazla constructor
+olabilir.
+Insert(Kayit kayit) -> kayit nesnesini T.C. kimlik no alanına göre veri yapısına ekler. Ekleme sonrası
+veri yapısı Max-heap özelliğini korumalıdır. (İpucu: Dizideki ilk boş pozisyona (heap-size + 1) kayit
+nesnesini ekleyin, daha sonra bir döngü içerisinde kayit nesnesinin T.C. kimlik nosu parent düğümün
+T.C. kimlik nosundan büyükse ikisini yer değiştirin. Koşul sağlandığı müddetçe döngü çalışmaya
+devam edecek ve bu şekilde, kayit nesnesi T.C. kimlik nosuna göre Max-heap’te doğru pozisyonuna
+yerleşecektir.
+Kayit Search(long T.C. kimlik no) -> T.C. kimlik no değeri verilen kaydı veri yapısında arar ve eğer
+bulursa kaydı döndürür, bulamazsa null döndürür. (
+Kayit En_Buyuk_Kaydi_Cikar() -> En büyük T.C. kimlik no değerine sahip olan kaydı döndürür ve aynı
+zamanda bu kaydı veri yapısından siler. İşlem sonrası veri yapısı Max-heap özelliğini korumalıdır
+Kayit Delete(long T.C. kimlik no) -> T.C. kimlik no değeri verilen kayit eğer veri yapısında varsa onu
+döndürür ve aynı zamanda bu kaydı veri yapısından siler, yoksa null döndürür. İşlem sonrası veri
+yapısı Max-heap özelliğini korumalıdır.
+Kayit Delete_pos(int pozisyon) -> Pozisyonu verilen kaydı döndürür ve aynı zamanda bu kaydı veri
+yapısından siler. Eğer pozisyon değeri heap-size sınırları içerisinde değilse null döndürür. İşlem
+sonrası veri yapısı Max-heap özelliğini korumalıdır.
+int Return_Kayit_Sayisi() -> Heap’te kaç tane kayıt olduğunu döndürür. 
+int Return_Seviye_Sayisi() -> Heap ağacının seviye sayısını döndürür.
+Ekrana_Yazdir(Kayit kayit) -> kayit nesnesinin değerlerini(T.C. kimlik no, ad, soyad) ekrana yazdırır.
+void Resize() -> Veri yapısının boyutunu 2 katına çıkarır.
+
+Deneme kısmı şu şekilde olmalıdır :
+Kapasitesi 2500 olan veri yapısı yaratılmıştır.
+Insert() metodu kullanılarak dosyadaki ilk 2500 kayıt veri yapısına eklenmiştir.
+Resize() metodu kullanılarak veri yapısının boyutu 2 katına çıkarılmıştır.
+Insert() metodu kullanılarak dosyadaki ikinci 2500 kayıt veri yapısına eklenmiştir.
+Return_Kayit_Sayisi() // Heap’teki kayıt sayısını ekrana yazdır
+Delete(7756591263)
+Ekrana_Yazdir(Kayit kayit) //üst satırda silinen kaydın değerlerini ekrana yazdır
+Return_Kayit_Sayisi() // Heap’teki kayıt sayısını ekrana yazdır
+En_Buyuk_Kaydi_Cikar()
+Ekrana_Yazdir(Kayit kayit) //üst satırda çıkarılan kaydın değerlerini ekrana yazdır
+Delete_pos(43)
+Ekrana_Yazdir(Kayit kayit) //üst satırda silinen kaydın değerlerini ekrana yazdır
+Search(9377761894)
+Ekrana_Yazdir(Kayit kayit) //üst satırda aranan 9377761894 T.C. nolu kaydın değerlerini ekrana yazdır
+Return_Seviye_Sayisi() // Heap ağacının seviye sayısını ekrana yazdır
+
